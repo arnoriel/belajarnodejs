@@ -3,10 +3,13 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 const expressLayouts = require('express-ejs-layouts');
+const morgan = require('morgan');
 const { body, validationResult } = require('express-validator');
 
 // Set EJS as the templating engine
 app.set('view engine', 'ejs');
+
+app.use(morgan('dev'));
 
 // Use express-ejs-layouts
 app.use(expressLayouts);

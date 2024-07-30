@@ -1,36 +1,38 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  nav ul li {
-    display: inline;
-    margin-right: 1rem;
-  }
-  
-  .content {
-    padding: 1rem;
-  }
-  
-  footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh; /* memastikan body memiliki tinggi minimal 100% viewport height */
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+.content {
+  padding: 1rem;
+  padding-bottom: 60px; /* memastikan konten tidak tertutup footer */
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: relative; /* mengubah posisi footer */
+  width: 100%;
+  bottom: 0;
+  margin-top: auto; /* memastikan footer berada di bagian bawah halaman */
+}
