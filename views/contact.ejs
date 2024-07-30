@@ -26,6 +26,12 @@
 <h3>Contact List</h3>
 <ul>
   <% contacts.forEach(contact => { %>
-    <li><strong><%= contact.name %>:</strong> <%= contact.email %> - <%= contact.phone %></li>
+    <li>
+      <strong><%= contact.name %>:</strong> <%= contact.email %> - <%= contact.phone %>
+      <form action="/contact/delete/<%= contact.id %>" method="POST" style="display:inline;">
+        <button type="submit">Delete</button>
+      </form>
+      <a href="/contact/edit/<%= contact.id %>">Edit</a>
+    </li>
   <% }) %>
 </ul>

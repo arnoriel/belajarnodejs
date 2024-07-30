@@ -1,0 +1,24 @@
+<h2>Edit Contact</h2>
+<form action="/contact/update/<%= contact.id %>" method="POST">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="<%= contact.name %>" required>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" value="<%= contact.email %>" required>
+  </div>
+  <div>
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone" value="<%= contact.phone %>" required placeholder="+6281234567890">
+  </div>
+  <button type="submit">Update</button>
+</form>
+
+<% if (errors.length > 0) { %>
+  <ul>
+    <% errors.forEach(error => { %>
+      <li><%= error.msg %></li>
+    <% }) %>
+  </ul>
+<% } %>
