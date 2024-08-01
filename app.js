@@ -41,18 +41,18 @@ const writeContacts = (contacts) => {
 
 // Define a route with main layout
 app.get('/', (req, res) => {
-  res.render('index', { title: 'Home', layout: 'layouts/main' });
+  res.render('index', { title: 'Home', layout: 'layouts/alternate' });
 });
 
 // Define a route with alternate layout
 app.get('/about', (req, res) => {
-  res.render('about', { title: 'About', layout: 'layouts/main' });
+  res.render('about', { title: 'About', layout: 'layouts/alternate' });
 });
 
 // Define a route to display the contact form and contacts list
 app.get('/contact', (req, res) => {
   const contacts = readContacts();
-  res.render('contact', { title: 'Contact', layout: 'layouts/main', contacts, errors: [] });
+  res.render('contact', { title: 'Contact', layout: 'layouts/alternate', contacts, errors: [] });
 });
 
 // Define a route to handle form submissions
